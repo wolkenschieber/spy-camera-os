@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wholeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true" 
+    android:visibility="invisible"
+    >
+
+    <LinearLayout
+        android:id="@+id/blackLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/black"
+        android:visibility="invisible" >
+    </LinearLayout>
+
+    <LinearLayout 
+        android:id="@+id/linearLayoutControl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:baselineAligned="false"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+    
+	    <LinearLayout
+	        android:id="@+id/linearLayoutLeft"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	
+	        <Button
+	            android:id="@+id/btnVideo"
+	            style="@style/ButtonText"
+	            android:layout_width="fill_parent"
+	            android:background="@drawable/btn_black"
+	            android:text="@string/video" />
+	
+	        <Button
+	            android:id="@+id/btnFace"
+	            style="@style/ButtonText"
+	            android:layout_width="fill_parent"
+	            android:background="@drawable/btn_black"
+	            android:text="@string/face" />
+	        
+		<Button
+		    android:id="@+id/btnBlack"
+		    style="@style/ButtonText"
+		    android:layout_width="fill_parent"
+		    android:background="@drawable/btn_black"
+		    android:text="@string/black" />
+	
+	    </LinearLayout>
+
+	    <LinearLayout
+	        android:id="@+id/linearLayoutCenter"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_horizontal"
+	        android:orientation="vertical" >
+
+        	    <LinearLayout
+			        android:id="@+id/linearLayoutPreview"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:orientation="horizontal" 
+			        >
+			
+			        <Button
+			            android:id="@+id/btnIncreaseSize"
+			            style="@style/ButtonText"
+			            android:layout_gravity="center_vertical"
+			            android:background="@drawable/btn_black"
+			            android:text="@string/plus" />
+			
+			        <SurfaceView
+			            android:id="@+id/svPreview"
+			            android:layout_width="100sp"
+			            android:layout_height="100sp" />
+			
+			        <Button
+			            android:id="@+id/btnDecreaseSize"
+			            style="@style/ButtonText"
+			            android:layout_gravity="center_vertical"
+			            android:background="@drawable/btn_black"
+			            android:text="@string/minus" />
+			    </LinearLayout>
+	        
+	    	<LinearLayout
+		        android:id="@+id/linearLayoutCenterButton"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+				<Button
+		            android:id="@+id/btnCapture"
+		            style="@style/ButtonText"
+		            android:layout_width="0dp"
+		            android:layout_weight="0.5"
+		            android:background="@drawable/btn_black"
+		            android:text="@string/capture" />
+				<Button
+		            android:id="@+id/btnAuto"
+		            style="@style/ButtonText"
+		            android:layout_width="0dp"
+		            android:layout_weight="0.5"
+		            android:background="@drawable/btn_black"
+		            android:text="@string/auto" />
+			</LinearLayout>
+	
+	    </LinearLayout>
+
+	    <LinearLayout
+	        android:id="@+id/linearLayoutRight"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+	
+	        <Button
+	            android:id="@+id/btnSwitchCam"
+	            style="@style/ButtonText"
+	            android:layout_width="fill_parent"
+	            android:background="@drawable/btn_black"
+	            android:text="@string/switchCamera" />
+	
+	        <Button
+	            android:id="@+id/btnHelp"
+	            style="@style/ButtonText"
+	            android:layout_width="fill_parent"
+	            android:background="@drawable/btn_black"
+	            android:text="@string/help" 
+	            />
+			
+	        <Button
+	            android:id="@+id/btnSetting"
+	            style="@style/ButtonText"
+	            android:layout_width="fill_parent"
+	            android:background="@drawable/btn_black"
+	            android:text="@string/setting" />
+	    </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

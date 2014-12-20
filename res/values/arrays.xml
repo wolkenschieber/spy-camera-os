@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="delayOptions">
+        <item>1 second</item>
+        <item>2 seconds</item>
+        <item>3 seconds</item>
+        <item>4 seconds</item>
+        <item>5 seconds</item>
+        <item>6 seconds</item>
+        <item>7 seconds</item>
+        <item>8 seconds</item>
+        <item>9 seconds</item>
+        <item>10 seconds</item>
+        <item>30 seconds</item>
+        <item>1 minute</item>
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+    </string-array>
+    <string-array name="delayValues">
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>4000</item>
+        <item>5000</item>
+        <item>6000</item>
+        <item>7000</item>
+        <item>8000</item>
+        <item>9000</item>
+        <item>10000</item>
+        <item>30000</item>
+        <item>60000</item>
+        <item>900000</item>
+        <item>1800000</item>
+        <item>3600000</item>
+    </string-array>
+    <string-array name="cameraOptions">
+        <item>Back Camera</item>
+        <item>Front Camera</item>
+    </string-array>
+    <string-array name="cameraValues">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="yesNoOptions">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <string-array name="yesNoValues">
+        <item>yes</item>
+        <item>no</item>
+    </string-array>
+    <string-array name="functionOptions">
+        <item>None</item>
+        <item>Single Image Capture</item>
+        <item>Start Autoshot</item>
+        <item>Start Faceshot</item>
+        <item>Start Video recording</item>
+    </string-array>
+    <string-array name="functionValues">
+        <item>none</item>
+        <item>capture</item>
+        <item>auto</item>
+        <item>face</item>
+        <item>video</item>
+    </string-array>
+    <string-array name="savingPathOptions">
+        <item>Phone</item>
+        <item>Memory Card</item>
+    </string-array>
+    <string-array name="widgetFunctionValues">
+        <item>Launch SC-OS</item>
+        <item>Single image capture</item>
+        <item>Start Auto image capture mode</item>
+        <item>Start Face detection mode</item>
+        <item>Start Video mode</item>
+    </string-array>
+	<string-array name="rotationOptions">
+        <item>Automatic</item>
+        <item>90 degrees</item>
+        <item>180 degrees</item>
+        <item>270 degrees</item>
+	</string-array>
+    <string-array name="rotationValues">
+        <item>0</item>
+        <item>90</item>
+        <item>180</item>
+        <item>270</item>
+    </string-array>
+</resources>

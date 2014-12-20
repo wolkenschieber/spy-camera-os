@@ -1,0 +1,117 @@
+<resources>
+    <string name="app_name">SC-OS</string>
+    <string name="app_versionName">0.1.3.3</string>
+    <string name="auto">Auto</string>
+    <string name="capture">Capture</string>
+    <string name="setting">Setting</string>
+    <string name="stop">Stop</string>
+    <string name="message_startAuto">Autoshot every %d seconds</string>
+    <string name="message_stopAuto">Stopping Autoshot</string>
+    <string name="message_startFace">Autoshot on detecting face(s)</string>
+    <string name="message_stopFace">Stopping Face Detection</string>
+    <string name="message_startVideo">Starting Video Recording : %s</string>
+    <string name="message_stopVideo">Stopping Video Recording</string>
+    <string name="message_capture">Save snaphot to </string>
+    <string name="face">Face</string>
+    <string name="title_activity_black">BlackActivity</string>
+    <string name="motion">Motion</string>
+    <string name="black">Black</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="video_recording">Video Recording</string>
+    <string name="video_recording_notice">Video recording feature is still experimental.\nIt\'s not yet work for all devices.</string>
+    <string name="i_understand">I Understand</string>
+    <string name="hint_blackmode">Return to normal mode by pinch-out zoom screen or pressing menu button</string>
+    <string name="minimize">Minimize</string>
+    <string name="changelog_dialog_text">
+<![CDATA[
+		Support the development by rate it/share it or buy me a cookie. Thank you.<br /><br />
+		<b>Version 0.1.3.3:</b>
+		<ul>
+		 <li>Someone (SPAWN SPY CAMERA) using my open source code to release same application and still using my name and email in it. Please mark his application if you see it, since he\'s spamming my email.
+So I release update to fix several bugs and update email address.</li>
+		 <li>Adding more delay selection.</li>
+        </ul>
+		<b>Version 0.1.3.1:</b>
+		<ul>
+		 <li>Remove StartApp Ad Network library & its permissions that causing detected as Malware</li>
+        </ul>
+		<b>Version 0.1.3:</b>
+		<ul>
+		 <li>Automatically send image captured via GMail account</li>
+		 <li><b>Add option to disable background service for those who experiencing performance issue</b></li>
+		 <li>Fix wrong rotation on tablets</li>
+         <li>Various bug fixes</li>
+        </ul>
+		<b>Version 0.1.2:</b>
+		<ul>
+         <li>Minimize and capture image/video in background (Experimental)</li>
+         <li>Widget feature for faster action and for custom text</li>
+         <li>Add custom rotation setting</li>
+         <li>Fix crash on HTC Wildfire</li>
+         <li>Various bug fixes</li>
+        </ul>
+		<b>Version 0.1.1:</b>
+		<ul>
+         <li>Restore audio setting (silent/vibrate/ringing) on closing application</li>
+         <li>Black mode:</li>
+         <ul> 
+         	<li>Back button will close the application</li>
+         	<li>To go back to normal mode use menu button or pinch-out zoom the screen</li>
+         </ul>
+         <li>Various bug fixes</li>
+        </ul>
+]]>
+    </string>
+    <string name="switchCamera">Switch</string>
+    <string name="video">Video</string>
+    <string name="help">Help</string>
+    <string name="help_html">
+<![CDATA[
+		<b>Buttons</b>
+		<ul>
+         <li>Capture: take 1 picture</li>
+         <li>Auto: automatically take pictures every x seconds (set in setting)</li>
+         <li>Face: automatically take pictures on detecting face(s)</li>
+         <li>Black: set screen to black (touch to capture unless auto/face/video is running)</li>
+         <li>Video: start video recording (Android 2.3 or higher)</li>
+         <li>Volume Up: start auto mode (can be changed in setting)</li>
+         <li>Volume Down: take 1 picture (can be changed in setting)</li>
+         <li>Minimize: minimize the application but the image capture/video recording still running. Stop it by clicking the notification status</li>
+        </ul>
+		<b>Tips</b>
+		<ul>
+		 <li>Disable background service feature to improve performance (setting - more)</li>
+         <li>You can stop background capture by clicking notification status or re-run the application</li>
+         <li>The image capture rotation is not correct? Go to image setting and change to correct it</li>
+         <li>Use Auto then Black to prevent anyone notice the application</li>
+         <li>You can zoom with pinch-to-zoom the preview image (Depends device support)</li>
+         <li>Use highest camera resolution with changing it in setting</li>
+         <li>You can enable autofocus to prevent blur images</li>
+         <li>You can disable autofocus in setting to increase capture speed</li>
+         <li>In setting - more.. there more advanced settings</li>
+         <li>You can set to start with black mode directly</li>
+         <li>If you have trouble taking picture try to changing the resolution in setting</li>
+         <li>If you have trouble on video recording try to changing the quality in setting</li>
+        </ul>
+		<b>2 types image capture resolution</b>
+		<ul>
+         <li>Low-res: faster, no shutter sound, lower camera resolution, more memory needed</li>
+         <li>High-res: slower, possible shutter sound(try to mute your phone), maximum camera resolution</li>
+		</ul>
+]]>
+    </string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="widgetActivityConfigureLabel">SC-OS Widget</string>
+    <string name="defaultText">default</string>
+    <string name="action">Action</string>
+    <string name="text">Text</string>
+    <string name="warning_image_resolution">High-res might still trigger shutter sound on some devices.</string>
+    <string name="warning_image_rotation">Rotating image will required a lot of memory, depends on image resolution</string>
+    <string name="minimize_notice">Background capture/recording feature is still experimental.\nIt\'s not yet work for all devices.\nYou can stop the background process by clicking the notification status</string>
+    <string name="warning_enable_auto_email">Aware that sending image as attachment will consume a lot of bandwidth. Check your spam folder if you cannot find the email.</string>
+    <string name="error_auto_email_auth">Sending email failed, wrong username/password</string>
+    <string name="error_auto_email_others">Sending email failed, send me feedback email with log to check why</string>
+    <string name="error_start_service_others">Failed executing action, try to disable background feature on Settings - More..</string>
+</resources>

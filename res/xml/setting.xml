@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+	<com.jwork.spycamera.AdMobPreference android:layout="@layout/admob"/>
+	<PreferenceCategory
+        android:summary="General Configuration"
+        android:title="General" >
+        <CheckBoxPreference
+            android:key="showToast"
+            android:defaultValue="true"
+            android:summary="Info On/Off"
+            android:title="Info Display" />
+        <CheckBoxPreference
+            android:key="hideFolder"
+            android:defaultValue="false"
+            android:summary="Hide SpyCamera folder with .nomedia file"
+            android:title="Hide SpyCamera folder in gallery" />
+        <CheckBoxPreference
+            android:key="vibration"
+            android:defaultValue="true"
+            android:summary="Vibrate on image capture"
+            android:title="Enable/disable vibration" />
+    	<PreferenceScreen
+                android:key="preference_advance"
+                android:title="More.."
+                android:summary="Advanced setting">
+            <com.jwork.spycamera.AdMobPreference android:layout="@layout/admob"/>
+    	    <PreferenceCategory
+		        android:title="More.." >
+                <ListPreference
+                    android:key="savingPath"
+                    android:title="Saving Path"
+                    android:summary="Where your image &amp; video stored" 
+		            android:entries="@array/savingPathOptions"
+                    />
+        		<ListPreference
+		            android:key="volUpAction"
+		            android:summary="Change volume up button function"
+		            android:entries="@array/functionOptions"
+		            android:entryValues="@array/functionValues"
+		            android:defaultValue="auto"
+		            android:title="Volume Up" />
+        		<ListPreference
+		            android:key="volDownAction"
+		            android:summary="Change volume down button function"
+		            android:entries="@array/functionOptions"
+		            android:entryValues="@array/functionValues"
+		            android:defaultValue="capture"
+		            android:title="Volume Down" />
+        		<CheckBoxPreference
+		            android:key="startupBlackMode"
+		            android:summary="Start the application with black mode activated"
+		            android:defaultValue="false"
+		            android:title="Start with black mode" />
+        		<CheckBoxPreference
+		            android:key="disableBackgroundService"
+		            android:summary="Check this if you have performance issue"
+		            android:defaultValue="false"
+		            android:title="Disable background feature" />
+        		<CheckBoxPreference
+		            android:key="logging"
+		            android:summary="Create log file for error report (100KB)"
+		            android:defaultValue="true"
+		            android:title="Logging" />
+		    </PreferenceCategory>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:summary="Camera configuration"
+        android:title="Camera" >
+        <ListPreference
+            android:key="cameraId"
+            android:summary="Switching front/back camera"
+            android:defaultValue="0"
+            android:title="Front/Back Camera" />
+        <CheckBoxPreference
+            android:key="useAutoFocus2"
+            android:defaultValue="false"
+            android:summary="Use autofocus when supported"
+            android:title="Autofocus" />
+    	<PreferenceScreen
+                android:key="preference_image"
+                android:title="Image Capture Configuration"
+                android:summary="Parameter/Configuration used when capturing image">
+   		    <com.jwork.spycamera.AdMobPreference android:layout="@layout/admob"/>
+   		    <PreferenceCategory
+		        android:title="Image Capture" >
+		        <ListPreference
+		            android:key="imageSize-0"
+		            android:summary="Resolution supported by phone camera"
+		            android:title="Back Camera Resolution" />
+		        <ListPreference
+		            android:key="imageSize-1"
+		            android:summary="Resolution supported by phone camera"
+		            android:title="Front Camera Resolution" />
+		        <ListPreference
+		            android:key="autoshotDelay"
+		            android:entries="@array/delayOptions"
+		            android:entryValues="@array/delayValues"
+		            android:summary="Delay between auto capture"
+		            android:defaultValue="2000"
+		            android:title="Auto Capture Delay" />
+		        <ListPreference
+		            android:key="imageRotation"
+		            android:entries="@array/rotationOptions"
+		            android:entryValues="@array/rotationValues"
+		            android:summary="Fixing image captured rotation"
+		            android:defaultValue="0"
+		            android:title="Image rotation" />
+        		<CheckBoxPreference
+		            android:key="yuvDecodeAlternate"
+		            android:summary="Activate this if you experience issue capturing low image resolution"
+		            android:defaultValue="false"
+		            android:title="Alternate low-resolution image capture" />
+		    </PreferenceCategory>
+         </PreferenceScreen>
+    	<PreferenceScreen
+                android:key="preference_video"
+                android:title="Video Recording Configuration"
+		        android:summary="Parameter/Configuration used when recording video">
+    	    <com.jwork.spycamera.AdMobPreference android:layout="@layout/admob"/>
+    	    <PreferenceCategory
+		        android:title="Video Recording" >
+		        <ListPreference
+		            android:key="videoQuality-0"
+		            android:title="Back Camera video quality" 
+		            android:summary="Based on device configuration"
+		            android:defaultValue="1"
+		            />
+		        <ListPreference
+		            android:key="videoQuality-1"
+		            android:title="Front Camera video quality" 
+		            android:summary="Based on device configuration"
+		            android:defaultValue="1"
+		            />
+		    </PreferenceCategory>
+		 </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Extra" >
+    	<PreferenceScreen
+                android:key="preference_auto_email"
+                android:title="Auto email setting"
+		        android:summary="Email every images taken to your email">
+		    <com.jwork.spycamera.AdMobPreference android:layout="@layout/admob"/>
+		    <PreferenceCategory
+		        android:title="Auto email image" >
+    	    	<CheckBoxPreference 
+		            android:key="autoEmailGmailEnable"
+		            android:title="Send via GMail" 
+		            android:summary="Enable sending images via GMail"
+		            android:defaultValue="false"
+		            />
+		    </PreferenceCategory>
+		    <PreferenceCategory
+		        android:title="Your email/Receiver" >
+    	    	<EditTextPreference
+		            android:key="autoEmailGmailReceiver"
+		            android:title="Your email address"
+		            android:summary="Example: my.personal.email@gmail.com" 
+		            android:defaultValue=""
+		    	    />
+		    </PreferenceCategory>
+    	    <PreferenceCategory
+		        android:title="Dummy account/Sender" 
+		        >
+    	    	<Preference
+    	    	    android:key="autoEmailGmailCreate" 
+    	    	    android:title="Click to create GMail account"
+    	    	    android:summary="Please use new dummy GMail account although this app won't log or send any username/password"
+    	    	    />
+    	    	<EditTextPreference
+		            android:key="autoEmailGmailSenderUsername"
+		            android:title="Username" 
+		            android:summary="Example: my.new.dummy@gmail.com"
+		            android:defaultValue="sc.os.dummy2@gmail.com"
+		    	    />
+		    	<EditTextPreference
+		            android:key="autoEmailGmailSenderPassword"
+		            android:title="Password"
+		            android:inputType="textPassword"
+		            android:summary="Example: myDummyPassword" 
+		            android:defaultValue="nuqooztwutkilphj"
+		    	    />
+		    </PreferenceCategory>
+		  </PreferenceScreen>
+	</PreferenceCategory>     
+    <PreferenceCategory
+        android:title="Support the development" >
+        <Preference
+            android:key="supportDonate"
+            android:title="Donate"
+			android:summary="via PayPal"
+            />
+        <Preference
+            android:key="feedbackPlay"
+            android:title="Rate &amp; comment"
+            android:summary="On Google Play"
+            />
+        <Preference
+            android:key="feedbackEmail"
+            android:title="Send feeback"
+            android:summary="Send me your ideas via email"
+            />
+        <Preference
+            android:key="shareIt"
+            android:title="Share It"
+            android:summary="Tell others about this application"
+            />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="About Spy Camera OS" >
+        <Preference
+            android:summary="@string/app_versionName"
+            android:title="Version"
+            />
+        <Preference
+            android:summary="Jimmy Halim"
+            android:title="Creator"
+            />
+        <Preference
+            android:key="aboutChangelog"
+            android:title="Change log"
+			android:summary="Check what's new"
+            />
+        <Preference
+            android:key="aboutSourceCode"
+            android:summary="https://bitbucket.org/jimmod/spycamera"
+            android:title="Source Code"
+            />
+    </PreferenceCategory>
+    
+</PreferenceScreen>
