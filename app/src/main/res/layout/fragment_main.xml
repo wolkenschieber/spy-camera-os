@@ -11,7 +11,8 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@android:color/black"
-        android:visibility="invisible"></LinearLayout>
+        android:visibility="invisible"
+        android:orientation="horizontal"/>
 
     <LinearLayout
         android:id="@+id/linearLayoutControl"

@@ -5,4 +5,4 @@
     android:minHeight="10dp"
     android:minWidth="10dp"
     android:previewImage="@drawable/icon"
-    android:resizeMode="none"></appwidget-provider>
+    android:resizeMode="none"/>
