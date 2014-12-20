@@ -31,60 +31,60 @@ import com.jwork.spycamera.utility.LogUtility;
 
 public class SpyCamWidgetConfigure extends Activity {
 
-	private LogUtility log = LogUtility.getInstance();
-	private int mAppWidgetId = -1;
-	private Spinner spinnerAction;
-	private EditText txtText;
-	
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		log.v(this, "onCreate");
-		
-		setContentView(R.layout.widget_configure);
-		spinnerAction = (Spinner) findViewById(R.id.widgetAction);
-		txtText = (EditText) findViewById(R.id.widgetText);
-		
-		Intent intent = getIntent();
-		Bundle extras = intent.getExtras();
-		if (extras != null) {
-		    mAppWidgetId = extras.getInt(
-		            AppWidgetManager.EXTRA_APPWIDGET_ID, 
-		            AppWidgetManager.INVALID_APPWIDGET_ID);
-		}
-		log.d(this, "mAppWidgetId: " + mAppWidgetId);
-	}
-	
-	public void onClickOK(View view) {
-		log.v(this, "onClickOK");
+    private LogUtility log = LogUtility.getInstance();
+    private int mAppWidgetId = -1;
+    private Spinner spinnerAction;
+    private EditText txtText;
 
-		int action = spinnerAction.getSelectedItemPosition();
-		if (action==3 && Build.VERSION.SDK_INT < Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
-			Toast.makeText(this, "Facedetection is only supported for Android 4.0 or newer", Toast.LENGTH_SHORT).show();
-			return;
-		}
-		
-		Intent resultValue = new Intent();
-		resultValue.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, mAppWidgetId);
-		
-		ConfigurationUtility prefs = ConfigurationUtility.getInstance(getApplicationContext());
-		prefs.setWidgetConfiguration(mAppWidgetId, action, txtText.getText().toString());
-		
-		setResult(RESULT_OK, resultValue);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        log.v(this, "onCreate");
 
-		AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getApplicationContext());
-		RemoteViews views = new RemoteViews(getApplicationContext().getPackageName(),
-				R.layout.widget_camera);
-		appWidgetManager.updateAppWidget(mAppWidgetId, views);
-		SpyCamWidgetProvider.updateAppWidget(this, appWidgetManager, mAppWidgetId);
+        setContentView(R.layout.widget_configure);
+        spinnerAction = (Spinner) findViewById(R.id.widgetAction);
+        txtText = (EditText) findViewById(R.id.widgetText);
 
-		finish();
-	}
-	
-	public void onClickCancel(View view) {
-		log.v(this, "onClickCancel");
-		setResult(RESULT_CANCELED);
-		finish();
-	}
-	
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        if (extras != null) {
+            mAppWidgetId = extras.getInt(
+                    AppWidgetManager.EXTRA_APPWIDGET_ID,
+                    AppWidgetManager.INVALID_APPWIDGET_ID);
+        }
+        log.d(this, "mAppWidgetId: " + mAppWidgetId);
+    }
+
+    public void onClickOK(View view) {
+        log.v(this, "onClickOK");
+
+        int action = spinnerAction.getSelectedItemPosition();
+        if (action == 3 && Build.VERSION.SDK_INT < Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+            Toast.makeText(this, "Facedetection is only supported for Android 4.0 or newer", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Intent resultValue = new Intent();
+        resultValue.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, mAppWidgetId);
+
+        ConfigurationUtility prefs = ConfigurationUtility.getInstance(getApplicationContext());
+        prefs.setWidgetConfiguration(mAppWidgetId, action, txtText.getText().toString());
+
+        setResult(RESULT_OK, resultValue);
+
+        AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getApplicationContext());
+        RemoteViews views = new RemoteViews(getApplicationContext().getPackageName(),
+                R.layout.widget_camera);
+        appWidgetManager.updateAppWidget(mAppWidgetId, views);
+        SpyCamWidgetProvider.updateAppWidget(this, appWidgetManager, mAppWidgetId);
+
+        finish();
+    }
+
+    public void onClickCancel(View view) {
+        log.v(this, "onClickCancel");
+        setResult(RESULT_CANCELED);
+        finish();
+    }
+
 }

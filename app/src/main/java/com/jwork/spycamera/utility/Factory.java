@@ -27,39 +27,39 @@ import com.jwork.spycamera.MainHandler;
  */
 public class Factory {
 
-	private static Factory instance = null;
-	
-	public static void reset() {
-		instance = null;
-	}
-	
-	public synchronized static Factory getInstance() {
-		if (instance==null) {
-			instance = new Factory();
-		}
-		return instance;
-	}
+    private static Factory instance = null;
+    private MainHandler mainHandler;
+    private MainController mainController;
 
-	private MainHandler mainHandler;
-	public synchronized MainHandler getMainHandler(MainFragment mainFragment) {
-		if (mainHandler==null) {
-			mainHandler = new MainHandler(mainFragment);
-		} else {
-			mainHandler.setFragment(mainFragment);
-		}
-		return mainHandler;
-	}
+    public static void reset() {
+        instance = null;
+    }
 
-	private MainController mainController;
-	public synchronized MainController getMainController(Activity activity,
-			Handler handler) {
-		if (mainController==null) {
-			mainController = new MainController(activity, handler);
-		} else {
-			mainController.setActivity(activity);
-			mainController.setUIHandler(handler);
-		}
-		return mainController;
-	}
-	
+    public synchronized static Factory getInstance() {
+        if (instance == null) {
+            instance = new Factory();
+        }
+        return instance;
+    }
+
+    public synchronized MainHandler getMainHandler(MainFragment mainFragment) {
+        if (mainHandler == null) {
+            mainHandler = new MainHandler(mainFragment);
+        } else {
+            mainHandler.setFragment(mainFragment);
+        }
+        return mainHandler;
+    }
+
+    public synchronized MainController getMainController(Activity activity,
+                                                         Handler handler) {
+        if (mainController == null) {
+            mainController = new MainController(activity, handler);
+        } else {
+            mainController.setActivity(activity);
+            mainController.setUIHandler(handler);
+        }
+        return mainController;
+    }
+
 }

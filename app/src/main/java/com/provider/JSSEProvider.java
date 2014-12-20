@@ -28,12 +28,9 @@ import java.security.Provider;
 
 public final class JSSEProvider extends Provider {
 
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = -4083233211478080177L;
+    private static final long serialVersionUID = -4083233211478080177L;
 
-	public JSSEProvider() {
+    public JSSEProvider() {
         super("HarmonyJSSE", 1.0, "Harmony JSSE Provider");
         AccessController.doPrivileged(new java.security.PrivilegedAction<Void>() {
             public Void run() {

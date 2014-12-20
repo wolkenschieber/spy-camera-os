@@ -25,15 +25,15 @@ public class NotificationActivity extends Activity {
 
     private LogUtility log;
 
-	@Override
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         log = LogUtility.getInstance();
         log.v(this, "onCreate");
         setContentView(R.layout.activity_notification);
-		Intent intent = new Intent(this, CameraTaskService.class);
-		stopService(intent);
-		finish();
+        Intent intent = new Intent(this, CameraTaskService.class);
+        stopService(intent);
+        finish();
     }
 
 }

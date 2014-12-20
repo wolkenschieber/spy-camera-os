@@ -29,9 +29,17 @@ import com.google.ads.AdView;
 
 public class AdMobPreference extends Preference {
 
-    public AdMobPreference(Context context, AttributeSet attrs, int defStyle) {super    (context, attrs, defStyle);}
-    public AdMobPreference(Context context, AttributeSet attrs) {super(context, attrs);}
-    public AdMobPreference(Context context) {super(context);}
+    public AdMobPreference(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+    }
+
+    public AdMobPreference(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    public AdMobPreference(Context context) {
+        super(context);
+    }
 
     @Override
     protected View onCreateView(ViewGroup parent) {
@@ -39,17 +47,17 @@ public class AdMobPreference extends Preference {
         View view = super.onCreateView(parent);
 
         // the context is a PreferenceActivity
-        Activity activity = (Activity)getContext();
+        Activity activity = (Activity) getContext();
 
         // Create the adView
         AdView adView = new AdView(activity, AdSize.BANNER, "a1515a1ffdbf894");
 
-        ((LinearLayout)view).addView(adView);
+        ((LinearLayout) view).addView(adView);
 
         // Initiate a generic request to load it with an ad
         AdRequest request = new AdRequest();
-        adView.loadAd(request);     
+        adView.loadAd(request);
 
-        return view;    
+        return view;
     }
 }

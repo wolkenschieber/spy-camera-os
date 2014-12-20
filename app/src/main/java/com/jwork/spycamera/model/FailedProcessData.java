@@ -19,70 +19,70 @@ package com.jwork.spycamera.model;
  * @author Jimmy Halim
  */
 public class FailedProcessData {
-	
-	private Throwable throwable;
-	private String title;
-	private String report;
-	private String exit;
-	private boolean forceExit;
-	private String flag;
-	
-	public FailedProcessData(final Throwable ex, String message, String captionSendReport, String captionExit
-			, final boolean forceExit, final String prefsString) {
-		this.throwable = ex;
-		this.title = message;
-		this.report = captionSendReport;
-		this.exit = captionExit;
-		this.forceExit = forceExit;
-		this.flag = prefsString;
-	}
 
-	public Throwable getThrowable() {
-		return throwable;
-	}
+    private Throwable throwable;
+    private String title;
+    private String report;
+    private String exit;
+    private boolean forceExit;
+    private String flag;
 
-	public void setThrowable(Throwable throwable) {
-		this.throwable = throwable;
-	}
+    public FailedProcessData(final Throwable ex, String message, String captionSendReport, String captionExit
+            , final boolean forceExit, final String prefsString) {
+        this.throwable = ex;
+        this.title = message;
+        this.report = captionSendReport;
+        this.exit = captionExit;
+        this.forceExit = forceExit;
+        this.flag = prefsString;
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    public Throwable getThrowable() {
+        return throwable;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public void setThrowable(Throwable throwable) {
+        this.throwable = throwable;
+    }
 
-	public String getReport() {
-		return report;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public void setReport(String report) {
-		this.report = report;
-	}
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-	public String getExit() {
-		return exit;
-	}
+    public String getReport() {
+        return report;
+    }
 
-	public void setExit(String exit) {
-		this.exit = exit;
-	}
+    public void setReport(String report) {
+        this.report = report;
+    }
 
-	public boolean isForceExit() {
-		return forceExit;
-	}
+    public String getExit() {
+        return exit;
+    }
 
-	public void setForceExit(boolean forceExit) {
-		this.forceExit = forceExit;
-	}
+    public void setExit(String exit) {
+        this.exit = exit;
+    }
 
-	public String getFlag() {
-		return flag;
-	}
+    public boolean isForceExit() {
+        return forceExit;
+    }
 
-	public void setFlag(String flag) {
-		this.flag = flag;
-	}
+    public void setForceExit(boolean forceExit) {
+        this.forceExit = forceExit;
+    }
+
+    public String getFlag() {
+        return flag;
+    }
+
+    public void setFlag(String flag) {
+        this.flag = flag;
+    }
 
 }

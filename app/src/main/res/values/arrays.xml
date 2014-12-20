@@ -75,12 +75,12 @@
         <item>Start Face detection mode</item>
         <item>Start Video mode</item>
     </string-array>
-	<string-array name="rotationOptions">
+    <string-array name="rotationOptions">
         <item>Automatic</item>
         <item>90 degrees</item>
         <item>180 degrees</item>
         <item>270 degrees</item>
-	</string-array>
+    </string-array>
     <string-array name="rotationValues">
         <item>0</item>
         <item>90</item>
