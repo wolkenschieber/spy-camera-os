@@ -94,7 +94,7 @@ public class MainHandler extends Handler {
                 } else {
                     tempString = (String) msg.obj;
                 }
-                showToast(msg.arg1 == 1 ? true : false, tempString, msg.arg2);
+                showToast(msg.arg1 == 1, tempString, msg.arg2);
                 break;
             case WHAT_SHOW_FAILED_PROCESS:
                 FailedProcessData tempFPD = (FailedProcessData) msg.obj;

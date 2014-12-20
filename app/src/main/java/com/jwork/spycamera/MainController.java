@@ -1404,26 +1404,26 @@ public class MainController implements OnZoomChangeListener, PreviewCallback, Au
 
     public String errorReport() {
         StringBuffer info = new StringBuffer();
-        info.append("cameraId: " + this.cameraId + "\n");
-        info.append("defaultOrientation: " + this.defaultOrientation + "\n");
-        info.append("zoomCurrent: " + this.zoomCurrent + "\n");
-        info.append("isHolderReady: " + this.isHolderReady + "\n");
-        info.append("isCameraConfigure: " + this.isCameraConfigure + "\n");
-        info.append("isImageHighRes: " + this.isImageHighRes + "\n");
-        info.append("isBlackScreen: " + this.isBlackScreen + "\n");
-        info.append("isTakingPicture: " + this.isTakingPicture + "\n");
-        info.append("isInAutoFocus: " + this.isInAutoFocus + "\n");
-        info.append("widgetAction: " + this.widgetAction + "\n");
-        info.append("state: " + this.state + "\n");
+        info.append("cameraId: ").append(this.cameraId).append("\n");
+        info.append("defaultOrientation: ").append(this.defaultOrientation).append("\n");
+        info.append("zoomCurrent: ").append(this.zoomCurrent).append("\n");
+        info.append("isHolderReady: ").append(this.isHolderReady).append("\n");
+        info.append("isCameraConfigure: ").append(this.isCameraConfigure).append("\n");
+        info.append("isImageHighRes: ").append(this.isImageHighRes).append("\n");
+        info.append("isBlackScreen: ").append(this.isBlackScreen).append("\n");
+        info.append("isTakingPicture: ").append(this.isTakingPicture).append("\n");
+        info.append("isInAutoFocus: ").append(this.isInAutoFocus).append("\n");
+        info.append("widgetAction: ").append(this.widgetAction).append("\n");
+        info.append("state: ").append(this.state).append("\n");
         info.append("previewSize: ");
         if (this.previewSize != null) {
-            info.append(this.previewSize.width + "x" + this.previewSize.height + "\n");
+            info.append(this.previewSize.width).append("x").append(this.previewSize.height).append("\n");
         } else {
             info.append("null\n");
         }
         info.append("captureSize: ");
         if (this.captureSize != null) {
-            info.append(this.captureSize.width + "x" + this.captureSize.height + "\n");
+            info.append(this.captureSize.width).append("x").append(this.captureSize.height).append("\n");
         } else {
             info.append("null\n");
         }
@@ -1436,40 +1436,40 @@ public class MainController implements OnZoomChangeListener, PreviewCallback, Au
         } catch (RuntimeException e) {
         }
         if (this.cameraParameters != null) {
-            info.append("\n" + "-getFocusMode(): " + this.cameraParameters.getFocusMode());
+            info.append("\n" + "-getFocusMode(): ").append(this.cameraParameters.getFocusMode());
             info.append("\n" + "-getPreviewSize: ");
             if (this.cameraParameters.getPreviewSize() == null) {
                 info.append("null");
             } else {
-                info.append(this.cameraParameters.getPreviewSize().width + "x" + this.cameraParameters.getPreviewSize().height);
+                info.append(this.cameraParameters.getPreviewSize().width).append("x").append(this.cameraParameters.getPreviewSize().height);
             }
-            info.append("\n" + "-getPreviewFormat: " + this.cameraParameters.getPreviewFormat());
+            info.append("\n" + "-getPreviewFormat: ").append(this.cameraParameters.getPreviewFormat());
             info.append("\n" + "-getSupportedPreviewFormats(): ");
             for (Integer i : this.cameraParameters.getSupportedPreviewFormats()) {
-                info.append(i + ",");
+                info.append(i).append(",");
             }
             info.append("\n" + "-getSupportedPreviewSizes(): ");
             for (Camera.Size i : this.cameraParameters.getSupportedPreviewSizes()) {
-                info.append(i.width + "x" + i.height + ",");
+                info.append(i.width).append("x").append(i.height).append(",");
             }
-            info.append("\n" + "-getPictureSize: " + this.cameraParameters.getPictureSize().width + "x" + this.cameraParameters.getPictureSize().height);
-            info.append("\n" + "-getPictureFormat: " + this.cameraParameters.getPictureFormat());
+            info.append("\n" + "-getPictureSize: ").append(this.cameraParameters.getPictureSize().width).append("x").append(this.cameraParameters.getPictureSize().height);
+            info.append("\n" + "-getPictureFormat: ").append(this.cameraParameters.getPictureFormat());
             info.append("\n" + "-getSupportedPictureFormats(): ");
             for (Integer i : this.cameraParameters.getSupportedPictureFormats()) {
-                info.append(i + ",");
+                info.append(i).append(",");
             }
             info.append("\n" + "-getSupportedPictureSizes(): ");
             for (Camera.Size i : this.cameraParameters.getSupportedPictureSizes()) {
-                info.append(i.width + "x" + i.height + ",");
+                info.append(i.width).append("x").append(i.height).append(",");
             }
         } else {
             info.append("null\n");
         }
-        info.append("\ncurrent video-quality: " + this.currentCamcorderProfileId + "\n");
+        info.append("\ncurrent video-quality: ").append(this.currentCamcorderProfileId).append("\n");
         info.append("\nvideo-qualities back-cam: ");
         if (this.videoQualities != null && this.videoQualities[0] != null) {
             for (String quality : videoQualities[0]) {
-                info.append(quality + ", ");
+                info.append(quality).append(", ");
             }
         } else {
             info.append("\nnull\n");
@@ -1477,7 +1477,7 @@ public class MainController implements OnZoomChangeListener, PreviewCallback, Au
         info.append("\nvideo-qualities front-cam: ");
         if (this.videoQualities != null && this.videoQualities.length >= 2 && this.videoQualities[1] != null) {
             for (String quality : videoQualities[1]) {
-                info.append(quality + ", ");
+                info.append(quality).append(", ");
             }
         } else {
             info.append("\nnull\n");

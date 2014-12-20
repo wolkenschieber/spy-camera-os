@@ -32,18 +32,18 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/widgetOK"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onClickOK"
-            android:text="@string/ok" />
-
-        <Button
             android:id="@+id/widgetCancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onClickCancel"
             android:text="@string/cancel" />
+
+        <Button
+            android:id="@+id/widgetOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickOK"
+            android:text="@string/ok" />
     </LinearLayout>
 
 </LinearLayout>

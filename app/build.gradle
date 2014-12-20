@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.jwork.spycamera"
-        minSdkVersion 8
+        minSdkVersion 12
         targetSdkVersion 15
     }
 

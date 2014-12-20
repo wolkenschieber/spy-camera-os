@@ -106,7 +106,7 @@ public class MainFragment extends Fragment implements OnClickListener, OnTouchLi
 
         //Widgets
         this.svPreview = (SurfaceView) view.findViewById(R.id.svPreview);
-        this.svPreview.setDrawingCacheQuality(100);
+        this.svPreview.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_LOW);
         this.svPreview.setDrawingCacheEnabled(true);
         this.svPreview.setZOrderOnTop(true);
         this.svPreview.setOnTouchListener(this);

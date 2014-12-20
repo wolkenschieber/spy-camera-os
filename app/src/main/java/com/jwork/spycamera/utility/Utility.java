@@ -127,43 +127,32 @@ public class Utility {
         report.append("Please write description. ");
         report.append("Example: The app crashed when I just start the application or It crash when I press 'capture' button");
         report.append("\n\n-------------------------------\n");
-        report.append(ex.toString() + "\n\n");
+        report.append(ex.toString()).append("\n\n");
         report.append("--------- Stack trace ---------\n");
         for (int i = 0; i < arr.length; i++) {
-            report.append("    " + arr[i].toString() + "\n");
+            report.append("    ").append(arr[i].toString()).append("\n");
         }
         report.append("-------------------------------\n\n");
 
         report.append("--------- Cause ---------\n");
         Throwable cause = ex.getCause();
         if (cause != null) {
-            report.append(cause.toString() + "\n");
+            report.append(cause.toString()).append("\n");
             arr = cause.getStackTrace();
             for (int i = 0; i < arr.length; i++) {
-                report.append("    " + arr[i].toString() + "\n");
+                report.append("    ").append(arr[i].toString()).append("\n");
             }
         }
         report.append("-------------------------------\n\n");
         report.append(getPhoneInfo(activity));
         report.append("-------------------------------\n");
-        report.append(additionalInfo + "\n");
+        report.append(additionalInfo).append("\n");
         report.append("-------------------------------\n");
         return report.toString();
     }
 
     public static String getPhoneInfo(Context activity) {
-        StringBuffer info = new StringBuffer();
-        info.append("App version: " + activity.getString(R.string.app_versionName) + "(" + getVersion(activity) + ")" + '\n');
-        info.append("Phone Model: " + android.os.Build.MODEL + '\n');
-        info.append("Android Version: " + android.os.Build.VERSION.RELEASE + '\n');
-        info.append("Board: " + android.os.Build.BOARD + '\n');
-        info.append("Brand: " + android.os.Build.BRAND + '\n');
-        info.append("Device: " + android.os.Build.DEVICE + '\n');
-        info.append("Host: " + android.os.Build.HOST + '\n');
-        info.append("ID: " + android.os.Build.ID + '\n');
-        info.append("Product: " + android.os.Build.PRODUCT + '\n');
-        info.append("Type: " + android.os.Build.TYPE + '\n');
-        return info.toString();
+        return "App version: " + activity.getString(R.string.app_versionName) + "(" + getVersion(activity) + ")" + '\n' + "Phone Model: " + Build.MODEL + '\n' + "Android Version: " + Build.VERSION.RELEASE + '\n' + "Board: " + Build.BOARD + '\n' + "Brand: " + Build.BRAND + '\n' + "Device: " + Build.DEVICE + '\n' + "Host: " + Build.HOST + '\n' + "ID: " + Build.ID + '\n' + "Product: " + Build.PRODUCT + '\n' + "Type: " + Build.TYPE + '\n';
     }
 
     public static int getVersion(Context activity) {
